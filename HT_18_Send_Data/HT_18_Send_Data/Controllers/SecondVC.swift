@@ -11,12 +11,18 @@ class SecondVC: UIViewController {
     
 //MARK: - property -
 
-    @IBOutlet weak var colorVC: UIView! {
+    @IBOutlet weak var colorVC: UIView!{
+           
         didSet {
-            colorVC.backgroundColor = color
+        colorVC.backgroundColor = color
         }
     }
-    var color: UIColor = .brown
+    
+    var color: UIColor = .green
+    
+    @IBOutlet var colorBG: UIView!
+    
+    
     
 //MARK: - actions -
     @IBAction func doneTab(_ sender: UIButton) {
