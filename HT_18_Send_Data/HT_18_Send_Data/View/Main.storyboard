@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--FirstVC-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="ViewController" customModule="HT_18_Send_Data" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="FirstVC" customModule="HT_18_Send_Data" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,10 +20,13 @@
                                 <rect key="frame" x="167" y="474.66666666666669" width="94" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="ChangeBG"/>
+                                <connections>
+                                    <action selector="ChangeBG" destination="Y6W-OH-hqX" eventType="touchUpInside" id="2AM-bo-Fhu"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
                             <constraint firstItem="g76-G1-A1W" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="85Y-oR-gam"/>
                             <constraint firstItem="g76-G1-A1W" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="scy-6S-KCW"/>
@@ -31,6 +34,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="pOg-ey-X4s"/>
                     <connections>
+                        <outlet property="viewColor" destination="5EZ-qb-Rvc" id="PV9-ee-NEN"/>
                         <segue destination="Dh2-KP-3dd" kind="show" id="5SQ-Nj-Vpy"/>
                     </connections>
                 </viewController>
@@ -56,10 +60,10 @@
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="97.767857142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--SecondVC-->
         <scene sceneID="qpz-cv-tJ4">
             <objects>
-                <viewController id="Dh2-KP-3dd" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Dh2-KP-3dd" customClass="SecondVC" customModule="HT_18_Send_Data" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X4L-Nj-fnK">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,6 +76,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="DONE"/>
+                                <connections>
+                                    <action selector="doneTab:" destination="Dh2-KP-3dd" eventType="touchUpInside" id="JJT-RT-RyN"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Jp6-Tu-bMn">
                                 <rect key="frame" x="25" y="92.999999999999972" width="378" height="397.33333333333326"/>
@@ -91,7 +98,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="XDj-oq-sSR">
                                                         <rect key="frame" x="0.0" y="29" width="378" height="34"/>
                                                         <subviews>
-                                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="mTm-np-w2e">
+                                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="60" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="mTm-np-w2e">
                                                                 <rect key="frame" x="-2" y="0.0" width="287" height="35"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="34" id="qsY-qQ-kTl"/>
@@ -122,7 +129,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7Cx-Su-W04">
                                                         <rect key="frame" x="0.0" y="29" width="378" height="34"/>
                                                         <subviews>
-                                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="M8R-nB-GMV">
+                                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="76" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="M8R-nB-GMV">
                                                                 <rect key="frame" x="-2" y="0.0" width="282" height="35"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="34" id="bjo-1u-q4A"/>
@@ -154,7 +161,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2Ob-Ni-1Py">
                                                         <rect key="frame" x="0.0" y="29" width="378" height="34"/>
                                                         <subviews>
-                                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Fii-CK-XvD">
+                                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="99" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="Fii-CK-XvD">
                                                                 <rect key="frame" x="-2" y="0.0" width="287" height="35"/>
                                                             </slider>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sfy-SO-b9M">
@@ -202,7 +209,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="46" translatesAutoresizingMaskIntoConstraints="NO" id="Cap-EK-ke8">
                                                         <rect key="frame" x="0.0" y="25.333333333333314" width="378" height="34"/>
                                                         <subviews>
-                                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="zn0-xo-y26">
+                                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="zn0-xo-y26">
                                                                 <rect key="frame" x="-2" y="0.0" width="246" height="35"/>
                                                             </slider>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tWx-VU-cy0">
@@ -222,7 +229,7 @@
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HWY-1q-d6Y">
                                         <rect key="frame" x="0.0" y="357.33333333333331" width="378" height="40"/>
-                                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="8jv-Fk-C16"/>
                                         </constraints>
@@ -241,6 +248,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0zF-r9-aPZ"/>
+                    <connections>
+                        <outlet property="colorVC" destination="HWY-1q-d6Y" id="EzR-bo-SoN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4kD-t3-iDO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -251,11 +261,14 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		FAC58F0C2AA9234F00BF165E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC58F0B2AA9234F00BF165E /* AppDelegate.swift */; };
 		FAC58F0E2AA9234F00BF165E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC58F0D2AA9234F00BF165E /* SceneDelegate.swift */; };
-		FAC58F102AA9234F00BF165E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC58F0F2AA9234F00BF165E /* ViewController.swift */; };
+		FAC58F102AA9234F00BF165E /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC58F0F2AA9234F00BF165E /* FirstVC.swift */; };
 		FAC58F152AA9235400BF165E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC58F142AA9235400BF165E /* Assets.xcassets */; };
 		FAC58F182AA9235400BF165E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC58F162AA9235400BF165E /* LaunchScreen.storyboard */; };
 		FAC58F232AA9248A00BF165E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC58F222AA9248A00BF165E /* Main.storyboard */; };
+		FAC58F252AA9365E00BF165E /* SecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC58F242AA9365E00BF165E /* SecondVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FAC58F082AA9234F00BF165E /* HT_18_Send_Data.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HT_18_Send_Data.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC58F0B2AA9234F00BF165E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAC58F0D2AA9234F00BF165E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FAC58F0F2AA9234F00BF165E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FAC58F0F2AA9234F00BF165E /* FirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
 		FAC58F142AA9235400BF165E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAC58F172AA9235400BF165E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAC58F192AA9235400BF165E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAC58F222AA9248A00BF165E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		FAC58F242AA9365E00BF165E /* SecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +61,6 @@
 				FAC58F202AA923F300BF165E /* Controllers */,
 				FAC58F212AA9240700BF165E /* View */,
 				FAC58F142AA9235400BF165E /* Assets.xcassets */,
-				FAC58F162AA9235400BF165E /* LaunchScreen.storyboard */,
 				FAC58F192AA9235400BF165E /* Info.plist */,
 				FAC58F1F2AA923D400BF165E /* App */,
 			);
@@ -78,7 +79,8 @@
 		FAC58F202AA923F300BF165E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FAC58F0F2AA9234F00BF165E /* ViewController.swift */,
+				FAC58F0F2AA9234F00BF165E /* FirstVC.swift */,
+				FAC58F242AA9365E00BF165E /* SecondVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -86,6 +88,7 @@
 		FAC58F212AA9240700BF165E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FAC58F162AA9235400BF165E /* LaunchScreen.storyboard */,
 				FAC58F222AA9248A00BF165E /* Main.storyboard */,
 			);
 			path = View;
@@ -162,8 +165,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAC58F102AA9234F00BF165E /* ViewController.swift in Sources */,
+				FAC58F102AA9234F00BF165E /* FirstVC.swift in Sources */,
 				FAC58F0C2AA9234F00BF165E /* AppDelegate.swift in Sources */,
+				FAC58F252AA9365E00BF165E /* SecondVC.swift in Sources */,
 				FAC58F0E2AA9234F00BF165E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
