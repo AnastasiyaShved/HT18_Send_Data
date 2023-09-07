@@ -12,26 +12,29 @@ class SecondVC: UIViewController {
 //MARK: - property -
 
     @IBOutlet weak var colorVC: UIView!{
-           
         didSet {
         colorVC.backgroundColor = color
         }
     }
     
-    var color: UIColor = .green
-    
     @IBOutlet var colorBG: UIView!
+    var color: UIColor = .green
+    var deligate: ColorBackgroundUpdateProtocol?
     
     
+
     
 //MARK: - actions -
-    @IBAction func doneTab(_ sender: UIButton) {
+    @IBAction func DoneWithDelegatee() {
+        deligate?.colorBackgroundackgroundUpdate(color: colorVC.backgroundColor ?? .gray)
+        
     }
+    
+    @IBAction func DoneWithClosure() {
+    }
+ 
 
 }
-
-
-
 
 
 
