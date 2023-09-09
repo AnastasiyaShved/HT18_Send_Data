@@ -22,9 +22,13 @@ class FirstVC: UIViewController {
         guard let secondVC = stor2.instantiateViewController(withIdentifier: "SecondVC") as? SecondVC else { return }
 //        secondVC.color = viewColor.backgroundColor ?? .gray
         
-        secondVC.self.view.backgroundColor = viewColor.backgroundColor ?? .gray
+        secondVC.view.backgroundColor = viewColor.backgroundColor ?? .gray
         secondVC.deligate = self
         
+        secondVC.complitionHander = { [weak self] color in
+            
+            self?.view.backgroundColor = color
+        }
         navigationController?.pushViewController(secondVC, animated: true)
     }
 }

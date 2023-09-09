@@ -91,6 +91,9 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="34" id="qsY-qQ-kTl"/>
                                                                 </constraints>
+                                                                <connections>
+                                                                    <action selector="redSlider:" destination="Dh2-KP-3dd" eventType="valueChanged" id="nlF-Sz-S4A"/>
+                                                                </connections>
                                                             </slider>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="255" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QfS-gc-CFp">
                                                                 <rect key="frame" x="312" y="0.0" width="90" height="34"/>
@@ -100,6 +103,9 @@
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="redAction:" destination="Dh2-KP-3dd" eventType="editingChanged" id="ZRw-en-Lj7"/>
+                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                     </stackView>
@@ -122,6 +128,9 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="34" id="bjo-1u-q4A"/>
                                                                 </constraints>
+                                                                <connections>
+                                                                    <action selector="greenSlider:" destination="Dh2-KP-3dd" eventType="valueChanged" id="JnG-Vm-ZvH"/>
+                                                                </connections>
                                                             </slider>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="255" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EUX-Vh-A9Y">
                                                                 <rect key="frame" x="312" y="0.0" width="90" height="34"/>
@@ -132,6 +141,9 @@
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="greebAction:" destination="Dh2-KP-3dd" eventType="editingChanged" id="aXN-aa-wxv"/>
+                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                     </stackView>
@@ -151,6 +163,9 @@
                                                         <subviews>
                                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="99" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="Fii-CK-XvD">
                                                                 <rect key="frame" x="-2" y="0.0" width="311" height="35"/>
+                                                                <connections>
+                                                                    <action selector="blueSlider:" destination="Dh2-KP-3dd" eventType="valueChanged" id="fqX-X7-AzD"/>
+                                                                </connections>
                                                             </slider>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="255" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sfy-SO-b9M">
                                                                 <rect key="frame" x="312" y="0.0" width="90" height="34"/>
@@ -160,6 +175,9 @@
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="blueAction:" destination="Dh2-KP-3dd" eventType="editingChanged" id="tzR-0j-1Pz"/>
+                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                     </stackView>
@@ -199,6 +217,9 @@
                                                         <subviews>
                                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="zn0-xo-y26">
                                                                 <rect key="frame" x="-2" y="0.0" width="270" height="35"/>
+                                                                <connections>
+                                                                    <action selector="opacitySlider:" destination="Dh2-KP-3dd" eventType="valueChanged" id="PUw-h8-CZS"/>
+                                                                </connections>
                                                             </slider>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="100%" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tWx-VU-cy0">
                                                                 <rect key="frame" x="312" y="0.0" width="90" height="34"/>
@@ -208,6 +229,9 @@
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="opacityAction:" destination="Dh2-KP-3dd" eventType="editingChanged" id="PrZ-2N-f1b"/>
+                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                     </stackView>
@@ -238,7 +262,6 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.84936116859999999" green="0.88485578799999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="uU4-pj-joa">
                                 <rect key="frame" x="80" y="511" width="292" height="78"/>
@@ -280,8 +303,17 @@
                     </view>
                     <navigationItem key="navigationItem" id="0zF-r9-aPZ"/>
                     <connections>
+                        <outlet property="blueSl" destination="Fii-CK-XvD" id="uFf-Tw-SyQ"/>
+                        <outlet property="blueTF" destination="sfy-SO-b9M" id="555-6p-aeE"/>
                         <outlet property="colorBG" destination="X4L-Nj-fnK" id="TDL-uz-ZkF"/>
                         <outlet property="colorVC" destination="TVA-6u-tY5" id="6IV-6T-Ewa"/>
+                        <outlet property="greenSl" destination="M8R-nB-GMV" id="LdF-Ka-gwe"/>
+                        <outlet property="greenTF" destination="EUX-Vh-A9Y" id="COR-ca-ipG"/>
+                        <outlet property="hexColorTF" destination="av5-8P-rMc" id="nj4-G4-r9H"/>
+                        <outlet property="opacitySl" destination="zn0-xo-y26" id="KDz-Mi-DYC"/>
+                        <outlet property="opacityTF" destination="tWx-VU-cy0" id="Byz-wM-fnK"/>
+                        <outlet property="redSl" destination="mTm-np-w2e" id="tQQ-4f-bnI"/>
+                        <outlet property="redTF" destination="QfS-gc-CFp" id="pNC-qV-Zla"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4kD-t3-iDO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
