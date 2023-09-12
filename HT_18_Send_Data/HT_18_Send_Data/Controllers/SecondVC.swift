@@ -18,6 +18,7 @@ class SecondVC: UIViewController {
     }
     @IBOutlet var colorBG: UIView!
     var color: UIColor = .green
+    
     var deligate: ColorBackgroundUpdateProtocol?
     var complitionHander: ((UIColor) -> ())?
     
@@ -41,7 +42,7 @@ class SecondVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         colorVC.layer.borderWidth = 1
-        colorVC.layer.borderColor = UIColor.darkGray.cgColor
+        colorVC.layer.borderColor = UIColor.gray.cgColor
         convertToHex()
     }
     
@@ -55,12 +56,13 @@ class SecondVC: UIViewController {
         _ = complitionHander?(color)
         navigationController?.popToRootViewController(animated: true)
     }
+    
     @IBAction func redSlider(_ sender: UISlider) {
         redTF.text = formatterForSlider(sender.value)
         rgbRedValue = Int(sender.value)
         convertToHex()
-        
     }
+    
     @IBAction func greenSlider(_ sender: UISlider) {
         greenTF.text = formatterForSlider(sender.value)
         rgbGreenValue = Int(sender.value)
@@ -84,19 +86,14 @@ class SecondVC: UIViewController {
     @IBAction func greebAction(_ sender: UITextField) {
         greenSl.setValue(formaterForTexFild(sender.text), animated: true)
     }
+    
     @IBAction func blueAction(_ sender: UITextField) {
         blueSl.setValue(formaterForTexFild(sender.text), animated: true)
     }
+
     @IBAction func opacityAction(_ sender: UITextField) {
         opacitySl.setValue(formaterForTexFild(sender.text), animated: true)
     }
-    
-    @IBAction func hexColorAction(_ sender: UITextField) {
-
-
-    }
-    
-    
     
     //MARK: - private funcs -
     private func formatterForSlider (_ value: Float) -> String {
@@ -108,22 +105,21 @@ class SecondVC: UIViewController {
     }
     private func convertToHex() {
         hexColorTF.text = String(format:"%02X", Int(rgbRedValue)) + String(format:"%02X", Int(rgbGreenValue)) + String(format:"%02X", Int(rgbBlueValue))
-        let color = UIColor(red: rgbRedValue, green: rgbGreenValue, blue: rgbBlueValue).withAlphaComponent(CGFloat(opacity / 100))
+
+        color = UIColor(red: rgbRedValue, green: rgbGreenValue, blue: rgbBlueValue).withAlphaComponent(CGFloat(opacity / 100))
         colorVC.backgroundColor = color
     }
-
-
 }
 
-extension UIColor {
-    convenience init(red: Int, green: Int, blue: Int) {
-        assert(red >= 0 && red <= 255, "Invalid red component")
-        assert(green >= 0 && green <= 255, "Invalid green component")
-        assert(blue >= 0 && blue <= 255, "Invalid blue component")
-
-        self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
-}
-}
+//extension UIColor {
+//    convenience init(red: Int, green: Int, blue: Int) {
+//        assert(red >= 0 && red <= 255, "Invalid red component")
+//        assert(green >= 0 && green <= 255, "Invalid green component")
+//        assert(blue >= 0 && blue <= 255, "Invalid blue component")
+//
+//        self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
+//    }
+//}
 
 
 

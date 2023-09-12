@@ -17,14 +17,15 @@ class FirstVC: UIViewController {
     @IBOutlet var viewColor: UIView!
 
     @IBAction func ChangeBG() {
-        
+
+        // with delegates
         let stor2 = UIStoryboard(name: "Main", bundle: nil)
         guard let secondVC = stor2.instantiateViewController(withIdentifier: "SecondVC") as? SecondVC else { return }
-//        secondVC.color = viewColor.backgroundColor ?? .gray
-        
+
         secondVC.view.backgroundColor = viewColor.backgroundColor ?? .gray
         secondVC.deligate = self
         
+        // with clousure
         secondVC.complitionHander = { [weak self] color in
             
             self?.view.backgroundColor = color
